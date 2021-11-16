@@ -371,8 +371,8 @@ public final class GameInterface extends javax.swing.JFrame {
     public String comprobarCelda(int[][]grillaResuleta, javax.swing.JTextField celda, int i, int j){
         String variableCelda="";
         // Debido a que el método recarga la grilla una vez clickeado el botón "Resolver", la validación
-        // se hace sobre los números ingresados por el usuario y no los de la grilla generada al iniciar
-        // el juego
+        // se hace sobre los números ingresados por el usuario en los text field de la interfaz gráfica 
+        // y no los de la grilla generada al iniciar el juego
         if(!celda.getText().equals(Integer.toString(grilla[i][j]))){
             // Entrado al if se ha validado que no se está trabajando sobre los números deshabilitados de
             // la grilla
@@ -402,7 +402,6 @@ public final class GameInterface extends javax.swing.JFrame {
         celda.setEditable(false); // se deshabilitan todas las celdas para que el usuario no las modifique
         return variableCelda;
     }
-            
 
     
     /**
